@@ -1,0 +1,187 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(0, 0%, 81%);
+    --light-greyish-blue: hsl(210, 46%, 95%);
+  }
+  
+  body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    margin: 0;
+    background-color: var(--light-greyish-blue);
+    color: white;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  h2 {
+    padding-right: 10px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  img {
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 15px;
+  }
+  
+  .testimonial-cards {
+    display: grid;
+    grid-template-areas: "one one two five"
+    "three four four five";
+    gap:20px;
+    margin: 60px 20px;
+  }
+  
+  .purple-card {
+    background-color: var(--moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 25px;
+    grid-area: one;
+  }
+  
+  .daniel-border {
+    border: 2.5px solid rgba(255, 255, 255, 0.356);
+    grid-area: three;
+  }
+  
+  .dark-grey-card {
+    background-color: var(--very-dark-grayish-blue);
+    grid-area: two;
+  }
+  
+  .navy-blue-card {
+    background-color: var(--very-dark-blackish-blue);
+    grid-area: four;
+  }
+  
+  .patrick-border {
+    border: 2.5px solid var(--moderate-violet);
+    grid-area: five;
+  }
+  
+  .sm-white-card,
+  .lg-white-card {
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+  }
+  
+  .purple-card,
+  .dark-grey-card,
+  .navy-blue-card,
+  .sm-white-card,
+  .lg-white-card {
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.116);
+  }
+  
+  .picture-and-name {
+    display: flex;
+  }
+  
+  .graduate {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .graduate-dark {
+    color: hsl(217, 19%, 35%, 0.5);
+  }
+  
+  .review-text {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .review-text-dark {
+    color: hsla(217, 19%, 35%, 0.75);
+  }
+  
+  .review-text,
+  .review-text-dark {
+    line-height: 20px;
+    padding-right: 17px;
+  }
+  
+  .attribution {
+    font-size: 12px;
+    text-align: center;
+    color: var(--very-dark-blackish-blue);
+    position: relative;
+    top: -15px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media (min-width: 1200px) {
+  
+    h2 {
+      padding-right: 20px;
+    }
+  
+    .review-text {
+      padding-right: 10px;
+    }
+  
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    margin: 20px 140px;
+    justify-content: center;
+    align-content: center;
+  } 
+  
+  .purple-card {
+    order: 1;
+    grid-column: 1 / 2 span;
+    margin-bottom: 0px;
+  }
+  
+  .dark-grey-card {
+    order: 2;
+    margin-bottom: 0px;
+  }
+  
+  .lg-white-card {
+    order: 3;
+    grid-column: span 1;
+    grid-row: span 2;
+    margin-bottom: 0px;
+  }
+  
+  .navy-blue-card {
+    order: 5;
+    margin-bottom: 0px;
+    grid-column: 2 / 2 span;
+  }
+  
+  .sm-white-card {
+    order: 4;
+    grid-row: 2 / 0;
+    grid-column: 1 / 1;
+    margin-bottom: 0px;
+  }
+  
+  .purple-card, .dark-grey-card, .sm-white-card, .navy-blue-card .lg-white-card{
+    padding: 30px 30px 30px 30px;
+  }
+  
+  .attribution {
+    position: relative;
+    top: 20px;
+  }
+  }
